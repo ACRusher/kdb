@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+       <context:component-scan base-package="com.kdb" />
+
+       <bean id="datasource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+              <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+              <property name="url" value="${connectionUrl}"/>
+              <property name="username" value="${username}"/>
+              <property name="password" value="${password}"/>
+       </bean>
+
+       <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+              <property name="ignoreResourceNotFound" value="true"/>
+              <property name="fileEncoding" value="utf-8"/>
+              <property name="locations" value="classpath:jdbc.properties"/>
+       </bean>
+
+       <bean id="lazyConnectionDataSourceProxy" class="org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy">
+              <property name="targetDataSource" ref="datasource"/>
+       </bean>
+
+       <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+              <property name="configLocation" value="classpath:mybatis-config.xml"/>
+              <property name="dataSource" ref="lazyConnectionDataSourceProxy"/>
+       </bean>
+
+       <!-- scan for mappers and let them be autowired -->
+       <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+              <property name="basePackage" value="com.kdb.dao.mapper"/>
+              <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+              <property name="annotationClass" value="com.kdb.annotation.MybatisMapper"/>
+       </bean>
+
+       <tx:annotation-driven proxy-target-class="true" transaction-manager="transactionManager"/>
+
+       <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+              <property name="dataSource" ref="datasource"/>
+       </bean>
+</beans>

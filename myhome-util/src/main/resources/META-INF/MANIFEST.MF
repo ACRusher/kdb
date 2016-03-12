@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Boot-Class-Path: remotetea-oncrpc.jar gmetric4j.jar
+Premain-Class: info.ganglia.jmxetric.JMXetricAgent
+Can-Redefine-Classes: false
+Created-By: Apache Maven
+Built-By: zhouxiliang.zxl
+Build-Jdk: 1.7.0_65

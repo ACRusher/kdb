@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd">
+    <!--这种是通过实现AutoProxyCreator的方法来实现AOP-->
+    <bean  class="common.aop.SimpleAutoProxyCreator"/>
+    <bean name="echoBean" class="common.aop.EchoBean"/>
+
+    <!--这种是通过注解的方式来实现-->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+    <bean class="common.aop.AnnotationAOP"/>
+
+
+    <!--下面的配置为通过 xml 配置aop的方式 参考：http://blog.csdn.net/liubinblog/article/details/11989781-->
+    <!--<bean id="xmlConfigAOP" class="common.aop.XmlConfigAOP"/>-->
+    <!--<aop:config proxy-target-class="true">-->
+        <!--&lt;!&ndash;全局的 pointcut 配置&ndash;&gt;-->
+        <!--<aop:pointcut id="p" expression="execution(* *..*())"/>-->
+        <!--&lt;!&ndash;事物管理的时候用这个&ndash;&gt;-->
+        <!--<aop:advisor advice-ref="txinterceptor" pointcut="execution(* *..*())"/>-->
+        <!--&lt;!&ndash;普通的业务aop使用这种配置&ndash;&gt;-->
+        <!--<aop:aspect id="aspect" order="1" ref="xmlConfigAOP">-->
+            <!--<aop:around  pointcut="execution(* *.dao.*(String))" method="around"  />-->
+            <!--<aop:around pointcut="execution(* *.biz.*(String))" method="around"  />-->
+        <!--</aop:aspect>-->
+    <!--</aop:config>-->
+
+    <!--<tx:advice id="txinterceptor" transaction-manager="transactionManager">-->
+        <!--<tx:attributes>-->
+            <!--<tx:method name="get*" propagation="SUPPORTS" read-only="true"/>-->
+            <!--<tx:method name="insert*" propagation="REQUIRED" read-only="false"/>-->
+        <!--</tx:attributes>-->
+    <!--</tx:advice>-->
+
+</beans>

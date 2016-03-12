@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>ACRusher</groupId>
+        <artifactId>myhome</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>myhome-spring-web</artifactId>
+    <packaging>war</packaging>
+    <name>myhome-spring-web</name>
+
+    <description>spring mvc</description>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>jetty</artifactId>
+            <version>6.1.26</version>
+        </dependency>
+        <dependency>
+            <groupId>ACRusher</groupId>
+            <artifactId>myhome-biz</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.kdb</groupId>
+            <artifactId>myhome-util</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>myhome-spring</finalName>
+        <filters>
+            <filter>../ant.properties</filter>
+        </filters>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>*.xml</include>
+                    <include>*.properties</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
+
+        <plugins>
+
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <warName>myhome-spring</warName>
+                    <filters>
+                        <filter>../ant.properties</filter>
+                    </filters>
+                    <webResources>
+                        <resource>
+                            <filtering>true</filtering>
+                            <directory>${basedir}/src/main/webapp/WEB-INF</directory>
+                            <includes>
+                                <include>**/*.xml</include>
+                                <include>**/*.properties</include>
+                            </includes>
+                            <targetPath>WEB-INF</targetPath>
+                        </resource>
+                    </webResources>
+
+                    <!--<webappDirectory>${project.build.directory}/platform</webappDirectory>-->
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>1.4.1</version>
+                <executions>
+                    <execution>
+                        <id>enforce-versions</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <bannedPlugins>
+                                    <!-- will only display a warning but does not fail the build. -->
+                                    <level>WARN</level>
+                                    <excludes>
+                                        <exclude>org.apache.maven.plugins:maven-verifier-plugin</exclude>
+                                    </excludes>
+                                    <message>Please consider using the maven-invoker-plugin
+                                        (http://maven.apache.org/plugins/maven-invoker-plugin/)!
+                                    </message>
+                                </bannedPlugins>
+                                <requireJavaVersion>
+                                    <version>1.6</version>
+                                </requireJavaVersion>
+                                <!--<requireOS>-->
+                                <!--<family>unix</family>-->
+                                <!--</requireOS>-->
+                                <bannedDependencies>
+                                    <!-- groupId[:artifactId][:version][:type][:scope] -->
+                                    <!-- 出现excludes中的jar时会报错 -->
+                                    <excludes>
+                                        <!--<exclude>ch.qos.logback</exclude>-->
+                                        <!--<exclude>commons-logging:commons-logging</exclude>-->
+                                        <!--<exclude>org.slf4j:log4j-over-slf4j</exclude>-->
+                                    </excludes>
+                                    <includes>
+                                        <!-- <include>commons-logging:commons-logging:99.0-does-not-exist</include>  -->
+                                    </includes>
+                                    <message>can't include logback,commons-logging</message>
+                                </bannedDependencies>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>maven-jetty-plugin</artifactId>
+                <version>6.1.26</version>
+                <configuration>
+                    <contextPath>/</contextPath>
+                    <scanIntervalSeconds>3</scanIntervalSeconds>
+                    <connectors>
+                        <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                            <port>8082</port>
+                            <maxIdleTime>60000</maxIdleTime>
+                        </connector>
+                    </connectors>
+                    <webDefaultXml>src/main/resources/webdefault.xml</webDefaultXml>
+                    <webApp>${basedir}/target/${project.artifactId}-${project.version}</webApp>
+                </configuration>
+            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.mortbay.jetty</groupId>-->
+                <!--<artifactId>jetty-maven-plugin</artifactId>-->
+                <!--<version>8.1.13.v20130916</version>-->
+                <!--<configuration>-->
+                    <!--<webApp>-->
+                        <!--<contextPath>/</contextPath>-->
+                        <!--<defaultsDescriptor>${basedir}/src/main/resources/webdefault.xml</defaultsDescriptor>-->
+                    <!--</webApp>-->
+                    <!--<scanIntervalSeconds>10</scanIntervalSeconds>-->
+                    <!--<stopKey>webx</stopKey>-->
+                    <!--<stopKey>9999</stopKey>-->
+                    <!--<stopPort>9999</stopPort>-->
+                    <!--<connectors>-->
+                        <!--<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">-->
+                            <!--<port>8082</port>-->
+                            <!--<maxIdleTime>60000</maxIdleTime>-->
+                        <!--</connector>-->
+                    <!--</connectors>-->
+                    <!--<requestLog implementation="org.eclipse.jetty.server.NCSARequestLog">-->
+                        <!--<filename>target/access.log</filename>-->
+                        <!--<retainDays>90</retainDays>-->
+                        <!--<append>false</append>-->
+                        <!--<extended>false</extended>-->
+                        <!--<logTimeZone>GMT+8:00</logTimeZone>-->
+                    <!--</requestLog>-->
+                    <!--<systemProperties>-->
+                        <!--<systemProperty>-->
+                            <!--<name>productionMode</name>-->
+                            <!--<value>false</value>-->
+                        <!--</systemProperty>-->
+                    <!--</systemProperties>-->
+                    <!--<jvmArgs>-XX:MaxPermSize=512M</jvmArgs>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+
+
+        </plugins>
+
+    </build>
+
+
+</project>

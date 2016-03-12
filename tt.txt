@@ -1,0 +1,700 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for ACRusher:myhome:war:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ line 242, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building myhome 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ myhome ---
+[INFO] ACRusher:myhome:war:1.0-SNAPSHOT
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.11:compile
+[INFO] +- org.slf4j:jcl-over-slf4j:jar:1.5.11:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.5.11:compile
+[INFO] +- log4j:log4j:jar:1.2.15:compile
+[INFO] |  +- javax.mail:mail:jar:1.4:compile
+[INFO] |  |  \- javax.activation:activation:jar:1.1:compile
+[INFO] |  +- javax.jms:jms:jar:1.1:compile
+[INFO] |  +- com.sun.jdmk:jmxtools:jar:1.2.1:compile
+[INFO] |  \- com.sun.jmx:jmxri:jar:1.2.1:compile
+[INFO] +- commons-logging:commons-logging:jar:1.1:compile
+[INFO] |  +- logkit:logkit:jar:1.0.1:compile
+[INFO] |  +- avalon-framework:avalon-framework:jar:4.1.3:compile
+[INFO] |  \- javax.servlet:servlet-api:jar:2.3:compile
+[INFO] +- commons-lang:commons-lang:jar:2.6:compile
+[INFO] +- org.hibernate:hibernate-core:jar:5.0.2.Final:compile
+[INFO] |  +- org.jboss.logging:jboss-logging:jar:3.3.0.Final:compile
+[INFO] |  +- org.apache.geronimo.specs:geronimo-jta_1.1_spec:jar:1.1.1:compile
+[INFO] |  +- org.hibernate.javax.persistence:hibernate-jpa-2.1-api:jar:1.0.0.Final:compile
+[INFO] |  +- org.javassist:javassist:jar:3.18.1-GA:compile
+[INFO] |  +- antlr:antlr:jar:2.7.7:compile
+[INFO] |  +- org.jboss:jandex:jar:1.2.2.Final:compile
+[INFO] |  +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  \- org.hibernate.common:hibernate-commons-annotations:jar:5.0.0.Final:compile
+[INFO] +- mysql:mysql-connector-java:jar:5.1.27:compile
+[INFO] +- org.apache.struts:struts2-core:jar:2.3.8:compile
+[INFO] |  +- org.apache.struts.xwork:xwork-core:jar:2.3.8:compile
+[INFO] |  |  +- asm:asm:jar:3.3:compile
+[INFO] |  |  \- asm:asm-commons:jar:3.3:compile
+[INFO] |  |     \- asm:asm-tree:jar:3.3:compile
+[INFO] |  +- org.freemarker:freemarker:jar:2.3.19:compile
+[INFO] |  +- ognl:ognl:jar:3.0.6:compile
+[INFO] |  |  \- javassist:javassist:jar:3.11.0.GA:compile
+[INFO] |  +- commons-fileupload:commons-fileupload:jar:1.2.2:compile
+[INFO] |  \- commons-io:commons-io:jar:2.0.1:compile
+[INFO] +- org.apache.struts:struts2-spring-plugin:jar:2.3.8:compile
+[INFO] |  \- org.apache.commons:commons-lang3:jar:3.1:compile
+[INFO] +- org.apache.struts:struts2-convention-plugin:jar:2.3.8:compile
+[INFO] +- org.springframework:spring-context:jar:4.2.2.RELEASE:compile
+[INFO] |  +- org.springframework:spring-aop:jar:4.2.2.RELEASE:compile
+[INFO] |  |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |  +- org.springframework:spring-beans:jar:4.2.2.RELEASE:compile
+[INFO] |  \- org.springframework:spring-expression:jar:4.2.2.RELEASE:compile
+[INFO] +- org.springframework:spring-core:jar:4.2.2.RELEASE:compile
+[INFO] +- org.springframework:spring-orm:jar:4.2.2.RELEASE:compile
+[INFO] |  +- org.springframework:spring-jdbc:jar:4.2.2.RELEASE:compile
+[INFO] |  \- org.springframework:spring-tx:jar:4.2.2.RELEASE:compile
+[INFO] +- org.springframework:spring-webmvc:jar:4.2.2.RELEASE:compile
+[INFO] |  \- org.springframework:spring-web:jar:4.2.2.RELEASE:compile
+[INFO] +- org.springframework:spring-test:jar:4.2.2.RELEASE:test
+[INFO] \- junit:junit:jar:4.9:test
+[INFO]    \- org.hamcrest:hamcrest-core:jar:1.1:test
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.818 s
+[INFO] Finished at: 2015-10-25T12:21:56+08:00
+[INFO] Final Memory: 10M/81M
+[INFO] ------------------------------------------------------------------------
+[INFO] Scanning for projects...
+[INFO] Reactor build order: 
+[INFO]   myhome
+[INFO]   myhome-util
+[INFO]   myhome-biz
+[INFO]   myhome-web
+[INFO]   myhome-spring-web
+[INFO] Searching repository for plugin with prefix: 'dependency'.
+[INFO] ------------------------------------------------------------------------
+[INFO] Building myhome
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[WARNING] POM for 'org.codehaus.jackson:jackson-core-asl:pom:1.9.13:compile' is invalid.
+
+Its dependencies (if any) will NOT be available to the current build.
+[WARNING] POM for 'org.codehaus.jackson:jackson-mapper-asl:pom:1.9.13:compile' is invalid.
+
+Its dependencies (if any) will NOT be available to the current build.
+[INFO] [dependency:tree {execution: default-cli}]
+[WARNING] POM for 'org.codehaus.jackson:jackson-core-asl:pom:1.9.13:compile' is invalid.
+
+Its dependencies (if any) will NOT be available to the current build.
+[WARNING] POM for 'org.codehaus.jackson:jackson-mapper-asl:pom:1.9.13:compile' is invalid.
+
+Its dependencies (if any) will NOT be available to the current build.
+[INFO] ACRusher:myhome:pom:1.0-SNAPSHOT
+[INFO] +- org.mybatis:mybatis:jar:3.2.2:compile
+[INFO] +- org.mybatis:mybatis-spring:jar:1.2.1:compile
+[INFO] +- org.codehaus.jackson:jackson-core-asl:jar:1.9.13:compile
+[INFO] +- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13:compile
+[INFO] +- org.apache.commons:commons-lang3:jar:3.1:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.11:compile
+[INFO] +- org.slf4j:jcl-over-slf4j:jar:1.5.11:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.5.11:compile
+[INFO] +- log4j:log4j:jar:1.2.15:compile
+[INFO] |  \- javax.mail:mail:jar:1.4:compile
+[INFO] |     \- javax.activation:activation:jar:1.1:compile
+[INFO] +- commons-logging:commons-logging:jar:1.1:compile
+[INFO] |  +- logkit:logkit:jar:1.0.1:compile
+[INFO] |  +- avalon-framework:avalon-framework:jar:4.1.3:compile
+[INFO] |  \- javax.servlet:servlet-api:jar:2.3:compile
+[INFO] +- commons-lang:commons-lang:jar:2.6:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.5.5-Final:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.1:compile
+[INFO] |  +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  \- javax.transaction:jta:jar:1.1:compile
+[INFO] +- org.hibernate:hibernate-annotations:jar:3.5.5-Final:compile
+[INFO] |  +- org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final:compile
+[INFO] |  \- org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.0.Final:compile
+[INFO] +- org.hibernate:hibernate-ehcache:jar:3.5.5-Final:compile
+[INFO] |  \- net.sf.ehcache:ehcache:jar:1.5.0:compile
+[INFO] |     +- backport-util-concurrent:backport-util-concurrent:jar:3.1:compile
+[INFO] |     \- net.sf.jsr107cache:jsr107cache:jar:1.0:compile
+[INFO] +- mysql:mysql-connector-java:jar:5.1.27:compile
+[INFO] +- org.apache.struts:struts2-core:jar:2.3.8:compile
+[INFO] |  +- org.apache.struts.xwork:xwork-core:jar:2.3.8:compile
+[INFO] |  +- org.freemarker:freemarker:jar:2.3.19:compile
+[INFO] |  +- ognl:ognl:jar:3.0.6:compile
+[INFO] |  |  \- javassist:javassist:jar:3.11.0.GA:compile
+[INFO] |  +- commons-fileupload:commons-fileupload:jar:1.2.2:compile
+[INFO] |  +- commons-io:commons-io:jar:2.0.1:compile
+[INFO] |  \- com.sun:tools:jar:1.5.0:system
+[INFO] +- org.apache.struts:struts2-spring-plugin:jar:2.3.8:compile
+[INFO] +- org.apache.struts:struts2-convention-plugin:jar:2.3.8:compile
+[INFO] +- org.springframework:spring-context:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-context-support:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-aop:jar:3.2.4.RELEASE:compile
+[INFO] |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] +- org.springframework:spring-beans:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-expression:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-core:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-orm:jar:3.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-jdbc:jar:3.2.4.RELEASE:compile
+[INFO] |  \- org.springframework:spring-tx:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-webmvc:jar:3.2.4.RELEASE:compile
+[INFO] |  \- org.springframework:spring-web:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-test:jar:3.2.4.RELEASE:test
+[INFO] +- org.aspectj:aspectjrt:jar:1.6.7:compile
+[INFO] +- org.aspectj:aspectjweaver:jar:1.7.2:compile
+[INFO] +- asm:asm:jar:3.3:compile
+[INFO] +- asm:asm-commons:jar:3.3:compile
+[INFO] |  \- asm:asm-tree:jar:3.3:compile
+[INFO] +- cglib:cglib:jar:2.2.2:compile
+[INFO] +- com.opensymphony.quartz:com.springsource.org.quartz:jar:1.6.2:compile
+[INFO] \- junit:junit:jar:4.9:test
+[INFO]    \- org.hamcrest:hamcrest-core:jar:1.1:test
+[INFO] ------------------------------------------------------------------------
+[INFO] Building myhome-util
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[INFO] [dependency:tree {execution: default-cli}]
+[WARNING] POM for 'org.codehaus.jackson:jackson-core-asl:pom:1.9.13:compile' is invalid.
+
+Its dependencies (if any) will NOT be available to the current build.
+[WARNING] POM for 'org.codehaus.jackson:jackson-mapper-asl:pom:1.9.13:compile' is invalid.
+
+Its dependencies (if any) will NOT be available to the current build.
+[INFO] com.kdb:myhome-util:jar:1.0-SNAPSHOT
+[INFO] +- org.apache.commons:commons-lang3:jar:3.1:compile
+[INFO] +- commons-collections:commons-collections:jar:3.1:compile
+[INFO] +- com.google.guava:guava:jar:17.0:compile
+[INFO] +- org.mybatis:mybatis:jar:3.2.2:compile
+[INFO] +- org.mybatis:mybatis-spring:jar:1.2.1:compile
+[INFO] +- org.codehaus.jackson:jackson-core-asl:jar:1.9.13:compile
+[INFO] +- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.11:compile
+[INFO] +- org.slf4j:jcl-over-slf4j:jar:1.5.11:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.5.11:compile
+[INFO] +- log4j:log4j:jar:1.2.15:compile
+[INFO] |  \- javax.mail:mail:jar:1.4:compile
+[INFO] |     \- javax.activation:activation:jar:1.1:compile
+[INFO] +- commons-logging:commons-logging:jar:1.1:compile
+[INFO] |  +- logkit:logkit:jar:1.0.1:compile
+[INFO] |  +- avalon-framework:avalon-framework:jar:4.1.3:compile
+[INFO] |  \- javax.servlet:servlet-api:jar:2.3:compile
+[INFO] +- commons-lang:commons-lang:jar:2.6:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.5.5-Final:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  \- javax.transaction:jta:jar:1.1:compile
+[INFO] +- org.hibernate:hibernate-annotations:jar:3.5.5-Final:compile
+[INFO] |  +- org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final:compile
+[INFO] |  \- org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.0.Final:compile
+[INFO] +- org.hibernate:hibernate-ehcache:jar:3.5.5-Final:compile
+[INFO] |  \- net.sf.ehcache:ehcache:jar:1.5.0:compile
+[INFO] |     +- backport-util-concurrent:backport-util-concurrent:jar:3.1:compile
+[INFO] |     \- net.sf.jsr107cache:jsr107cache:jar:1.0:compile
+[INFO] +- mysql:mysql-connector-java:jar:5.1.27:compile
+[INFO] +- org.apache.struts:struts2-core:jar:2.3.8:compile
+[INFO] |  +- org.apache.struts.xwork:xwork-core:jar:2.3.8:compile
+[INFO] |  +- org.freemarker:freemarker:jar:2.3.19:compile
+[INFO] |  +- ognl:ognl:jar:3.0.6:compile
+[INFO] |  |  \- javassist:javassist:jar:3.11.0.GA:compile
+[INFO] |  +- commons-fileupload:commons-fileupload:jar:1.2.2:compile
+[INFO] |  +- commons-io:commons-io:jar:2.0.1:compile
+[INFO] |  \- com.sun:tools:jar:1.5.0:system
+[INFO] +- org.apache.struts:struts2-spring-plugin:jar:2.3.8:compile
+[INFO] +- org.apache.struts:struts2-convention-plugin:jar:2.3.8:compile
+[INFO] +- org.springframework:spring-context:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-context-support:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-aop:jar:3.2.4.RELEASE:compile
+[INFO] |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] +- org.springframework:spring-beans:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-expression:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-core:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-orm:jar:3.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-jdbc:jar:3.2.4.RELEASE:compile
+[INFO] |  \- org.springframework:spring-tx:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-webmvc:jar:3.2.4.RELEASE:compile
+[INFO] |  \- org.springframework:spring-web:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-test:jar:3.2.4.RELEASE:test
+[INFO] +- org.aspectj:aspectjrt:jar:1.6.7:compile
+[INFO] +- org.aspectj:aspectjweaver:jar:1.7.2:compile
+[INFO] +- asm:asm:jar:3.3:compile
+[INFO] +- asm:asm-commons:jar:3.3:compile
+[INFO] |  \- asm:asm-tree:jar:3.3:compile
+[INFO] +- cglib:cglib:jar:2.2.2:compile
+[INFO] +- com.opensymphony.quartz:com.springsource.org.quartz:jar:1.6.2:compile
+[INFO] \- junit:junit:jar:4.9:test
+[INFO]    \- org.hamcrest:hamcrest-core:jar:1.1:test
+[INFO] ------------------------------------------------------------------------
+[INFO] Building myhome-biz
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[INFO] snapshot com.kdb:myhome-util:1.0-SNAPSHOT: checking for updates from central
+Downloading: http://maven.oschina.net/content/groups/public//com/kdb/myhome-util/1.0-SNAPSHOT/myhome-util-1.0-SNAPSHOT.jar
+[INFO] Unable to find resource 'com.kdb:myhome-util:jar:1.0-SNAPSHOT' in repository central (http://maven.oschina.net/content/groups/public/)
+[INFO] ------------------------------------------------------------------------
+[ERROR] BUILD ERROR
+[INFO] ------------------------------------------------------------------------
+[INFO] Failed to resolve artifact.
+
+Missing:
+----------
+1) com.kdb:myhome-util:jar:1.0-SNAPSHOT
+
+  Try downloading the file manually from the project website.
+
+  Then, install it using the command: 
+      mvn install:install-file -DgroupId=com.kdb -DartifactId=myhome-util -Dversion=1.0-SNAPSHOT -Dpackaging=jar -Dfile=/path/to/file
+
+  Alternatively, if you host your own repository you can deploy the file there: 
+      mvn deploy:deploy-file -DgroupId=com.kdb -DartifactId=myhome-util -Dversion=1.0-SNAPSHOT -Dpackaging=jar -Dfile=/path/to/file -Durl=[url] -DrepositoryId=[id]
+
+  Path to dependency: 
+  	1) ACRusher:myhome-biz:jar:1.0-SNAPSHOT
+  	2) com.kdb:myhome-util:jar:1.0-SNAPSHOT
+
+----------
+1 required artifact is missing.
+
+for artifact: 
+  ACRusher:myhome-biz:jar:1.0-SNAPSHOT
+
+from the specified remote repositories:
+  central (http://maven.oschina.net/content/groups/public/)
+
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] For more information, run Maven with the -e switch
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 24 seconds
+[INFO] Finished at: Mon Dec 21 13:40:03 CST 2015
+[INFO] Final Memory: 23M/236M
+[INFO] ------------------------------------------------------------------------
+[INFO] Scanning for projects...
+[INFO] Reactor build order: 
+[INFO]   myhome
+[INFO]   myhome-util
+[INFO]   myhome-biz
+[INFO]   myhome-web
+[INFO]   myhome-spring-web
+[INFO] Searching repository for plugin with prefix: 'dependency'.
+[INFO] ------------------------------------------------------------------------
+[INFO] Building myhome
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[WARNING] POM for 'org.codehaus.jackson:jackson-core-asl:pom:1.9.13:compile' is invalid.
+
+Its dependencies (if any) will NOT be available to the current build.
+[WARNING] POM for 'org.codehaus.jackson:jackson-mapper-asl:pom:1.9.13:compile' is invalid.
+
+Its dependencies (if any) will NOT be available to the current build.
+[INFO] [dependency:tree {execution: default-cli}]
+[WARNING] POM for 'org.codehaus.jackson:jackson-core-asl:pom:1.9.13:compile' is invalid.
+
+Its dependencies (if any) will NOT be available to the current build.
+[WARNING] POM for 'org.codehaus.jackson:jackson-mapper-asl:pom:1.9.13:compile' is invalid.
+
+Its dependencies (if any) will NOT be available to the current build.
+[INFO] ACRusher:myhome:pom:1.0-SNAPSHOT
+[INFO] +- org.mybatis:mybatis:jar:3.2.2:compile
+[INFO] +- org.mybatis:mybatis-spring:jar:1.2.1:compile
+[INFO] +- org.codehaus.jackson:jackson-core-asl:jar:1.9.13:compile
+[INFO] +- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13:compile
+[INFO] +- org.apache.commons:commons-lang3:jar:3.1:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.11:compile
+[INFO] +- org.slf4j:jcl-over-slf4j:jar:1.5.11:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.5.11:compile
+[INFO] +- log4j:log4j:jar:1.2.15:compile
+[INFO] |  \- javax.mail:mail:jar:1.4:compile
+[INFO] |     \- javax.activation:activation:jar:1.1:compile
+[INFO] +- commons-logging:commons-logging:jar:1.1:compile
+[INFO] |  +- logkit:logkit:jar:1.0.1:compile
+[INFO] |  +- avalon-framework:avalon-framework:jar:4.1.3:compile
+[INFO] |  \- javax.servlet:servlet-api:jar:2.3:compile
+[INFO] +- commons-lang:commons-lang:jar:2.6:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.5.5-Final:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.1:compile
+[INFO] |  +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  \- javax.transaction:jta:jar:1.1:compile
+[INFO] +- org.hibernate:hibernate-annotations:jar:3.5.5-Final:compile
+[INFO] |  +- org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final:compile
+[INFO] |  \- org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.0.Final:compile
+[INFO] +- org.hibernate:hibernate-ehcache:jar:3.5.5-Final:compile
+[INFO] |  \- net.sf.ehcache:ehcache:jar:1.5.0:compile
+[INFO] |     +- backport-util-concurrent:backport-util-concurrent:jar:3.1:compile
+[INFO] |     \- net.sf.jsr107cache:jsr107cache:jar:1.0:compile
+[INFO] +- mysql:mysql-connector-java:jar:5.1.27:compile
+[INFO] +- org.apache.struts:struts2-core:jar:2.3.8:compile
+[INFO] |  +- org.apache.struts.xwork:xwork-core:jar:2.3.8:compile
+[INFO] |  +- org.freemarker:freemarker:jar:2.3.19:compile
+[INFO] |  +- ognl:ognl:jar:3.0.6:compile
+[INFO] |  |  \- javassist:javassist:jar:3.11.0.GA:compile
+[INFO] |  +- commons-fileupload:commons-fileupload:jar:1.2.2:compile
+[INFO] |  +- commons-io:commons-io:jar:2.0.1:compile
+[INFO] |  \- com.sun:tools:jar:1.5.0:system
+[INFO] +- org.apache.struts:struts2-spring-plugin:jar:2.3.8:compile
+[INFO] +- org.apache.struts:struts2-convention-plugin:jar:2.3.8:compile
+[INFO] +- org.springframework:spring-context:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-context-support:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-aop:jar:3.2.4.RELEASE:compile
+[INFO] |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] +- org.springframework:spring-beans:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-expression:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-core:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-orm:jar:3.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-jdbc:jar:3.2.4.RELEASE:compile
+[INFO] |  \- org.springframework:spring-tx:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-webmvc:jar:3.2.4.RELEASE:compile
+[INFO] |  \- org.springframework:spring-web:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-test:jar:3.2.4.RELEASE:test
+[INFO] +- org.aspectj:aspectjrt:jar:1.6.7:compile
+[INFO] +- org.aspectj:aspectjweaver:jar:1.7.2:compile
+[INFO] +- asm:asm:jar:3.3:compile
+[INFO] +- asm:asm-commons:jar:3.3:compile
+[INFO] |  \- asm:asm-tree:jar:3.3:compile
+[INFO] +- cglib:cglib:jar:2.2.2:compile
+[INFO] +- com.opensymphony.quartz:com.springsource.org.quartz:jar:1.6.2:compile
+[INFO] \- junit:junit:jar:4.9:test
+[INFO]    \- org.hamcrest:hamcrest-core:jar:1.1:test
+[INFO] ------------------------------------------------------------------------
+[INFO] Building myhome-util
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[INFO] [dependency:tree {execution: default-cli}]
+[WARNING] POM for 'org.codehaus.jackson:jackson-core-asl:pom:1.9.13:compile' is invalid.
+
+Its dependencies (if any) will NOT be available to the current build.
+[WARNING] POM for 'org.codehaus.jackson:jackson-mapper-asl:pom:1.9.13:compile' is invalid.
+
+Its dependencies (if any) will NOT be available to the current build.
+[INFO] com.kdb:myhome-util:jar:1.0-SNAPSHOT
+[INFO] +- org.apache.commons:commons-lang3:jar:3.1:compile
+[INFO] +- commons-collections:commons-collections:jar:3.1:compile
+[INFO] +- com.google.guava:guava:jar:17.0:compile
+[INFO] +- org.mybatis:mybatis:jar:3.2.2:compile
+[INFO] +- org.mybatis:mybatis-spring:jar:1.2.1:compile
+[INFO] +- org.codehaus.jackson:jackson-core-asl:jar:1.9.13:compile
+[INFO] +- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.11:compile
+[INFO] +- org.slf4j:jcl-over-slf4j:jar:1.5.11:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.5.11:compile
+[INFO] +- log4j:log4j:jar:1.2.15:compile
+[INFO] |  \- javax.mail:mail:jar:1.4:compile
+[INFO] |     \- javax.activation:activation:jar:1.1:compile
+[INFO] +- commons-logging:commons-logging:jar:1.1:compile
+[INFO] |  +- logkit:logkit:jar:1.0.1:compile
+[INFO] |  +- avalon-framework:avalon-framework:jar:4.1.3:compile
+[INFO] |  \- javax.servlet:servlet-api:jar:2.3:compile
+[INFO] +- commons-lang:commons-lang:jar:2.6:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.5.5-Final:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  \- javax.transaction:jta:jar:1.1:compile
+[INFO] +- org.hibernate:hibernate-annotations:jar:3.5.5-Final:compile
+[INFO] |  +- org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final:compile
+[INFO] |  \- org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.0.Final:compile
+[INFO] +- org.hibernate:hibernate-ehcache:jar:3.5.5-Final:compile
+[INFO] |  \- net.sf.ehcache:ehcache:jar:1.5.0:compile
+[INFO] |     +- backport-util-concurrent:backport-util-concurrent:jar:3.1:compile
+[INFO] |     \- net.sf.jsr107cache:jsr107cache:jar:1.0:compile
+[INFO] +- mysql:mysql-connector-java:jar:5.1.27:compile
+[INFO] +- org.apache.struts:struts2-core:jar:2.3.8:compile
+[INFO] |  +- org.apache.struts.xwork:xwork-core:jar:2.3.8:compile
+[INFO] |  +- org.freemarker:freemarker:jar:2.3.19:compile
+[INFO] |  +- ognl:ognl:jar:3.0.6:compile
+[INFO] |  |  \- javassist:javassist:jar:3.11.0.GA:compile
+[INFO] |  +- commons-fileupload:commons-fileupload:jar:1.2.2:compile
+[INFO] |  +- commons-io:commons-io:jar:2.0.1:compile
+[INFO] |  \- com.sun:tools:jar:1.5.0:system
+[INFO] +- org.apache.struts:struts2-spring-plugin:jar:2.3.8:compile
+[INFO] +- org.apache.struts:struts2-convention-plugin:jar:2.3.8:compile
+[INFO] +- org.springframework:spring-context:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-context-support:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-aop:jar:3.2.4.RELEASE:compile
+[INFO] |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] +- org.springframework:spring-beans:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-expression:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-core:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-orm:jar:3.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-jdbc:jar:3.2.4.RELEASE:compile
+[INFO] |  \- org.springframework:spring-tx:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-webmvc:jar:3.2.4.RELEASE:compile
+[INFO] |  \- org.springframework:spring-web:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-test:jar:3.2.4.RELEASE:test
+[INFO] +- org.aspectj:aspectjrt:jar:1.6.7:compile
+[INFO] +- org.aspectj:aspectjweaver:jar:1.7.2:compile
+[INFO] +- asm:asm:jar:3.3:compile
+[INFO] +- asm:asm-commons:jar:3.3:compile
+[INFO] |  \- asm:asm-tree:jar:3.3:compile
+[INFO] +- cglib:cglib:jar:2.2.2:compile
+[INFO] +- com.opensymphony.quartz:com.springsource.org.quartz:jar:1.6.2:compile
+[INFO] \- junit:junit:jar:4.9:test
+[INFO]    \- org.hamcrest:hamcrest-core:jar:1.1:test
+[INFO] ------------------------------------------------------------------------
+[INFO] Building myhome-biz
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[INFO] snapshot com.kdb:myhome-util:1.0-SNAPSHOT: checking for updates from localcentral
+[INFO] snapshot com.kdb:myhome-util:1.0-SNAPSHOT: checking for updates from localthirdparty
+[INFO] [dependency:tree {execution: default-cli}]
+[WARNING] POM for 'org.codehaus.jackson:jackson-core-asl:pom:1.9.13:compile' is invalid.
+
+Its dependencies (if any) will NOT be available to the current build.
+[WARNING] POM for 'org.codehaus.jackson:jackson-mapper-asl:pom:1.9.13:compile' is invalid.
+
+Its dependencies (if any) will NOT be available to the current build.
+[INFO] ACRusher:myhome-biz:jar:1.0-SNAPSHOT
+[INFO] +- com.kdb:myhome-util:jar:1.0-SNAPSHOT:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.1:compile
+[INFO] |  \- com.google.guava:guava:jar:17.0:compile
+[INFO] +- org.mybatis:mybatis:jar:3.2.2:compile
+[INFO] +- org.mybatis:mybatis-spring:jar:1.2.1:compile
+[INFO] +- org.codehaus.jackson:jackson-core-asl:jar:1.9.13:compile
+[INFO] +- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13:compile
+[INFO] +- org.apache.commons:commons-lang3:jar:3.1:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.11:compile
+[INFO] +- org.slf4j:jcl-over-slf4j:jar:1.5.11:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.5.11:compile
+[INFO] +- log4j:log4j:jar:1.2.15:compile
+[INFO] |  \- javax.mail:mail:jar:1.4:compile
+[INFO] |     \- javax.activation:activation:jar:1.1:compile
+[INFO] +- commons-logging:commons-logging:jar:1.1:compile
+[INFO] |  +- logkit:logkit:jar:1.0.1:compile
+[INFO] |  +- avalon-framework:avalon-framework:jar:4.1.3:compile
+[INFO] |  \- javax.servlet:servlet-api:jar:2.3:compile
+[INFO] +- commons-lang:commons-lang:jar:2.6:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.5.5-Final:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  \- javax.transaction:jta:jar:1.1:compile
+[INFO] +- org.hibernate:hibernate-annotations:jar:3.5.5-Final:compile
+[INFO] |  +- org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final:compile
+[INFO] |  \- org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.0.Final:compile
+[INFO] +- org.hibernate:hibernate-ehcache:jar:3.5.5-Final:compile
+[INFO] |  \- net.sf.ehcache:ehcache:jar:1.5.0:compile
+[INFO] |     +- backport-util-concurrent:backport-util-concurrent:jar:3.1:compile
+[INFO] |     \- net.sf.jsr107cache:jsr107cache:jar:1.0:compile
+[INFO] +- mysql:mysql-connector-java:jar:5.1.27:compile
+[INFO] +- org.apache.struts:struts2-core:jar:2.3.8:compile
+[INFO] |  +- org.apache.struts.xwork:xwork-core:jar:2.3.8:compile
+[INFO] |  +- org.freemarker:freemarker:jar:2.3.19:compile
+[INFO] |  +- ognl:ognl:jar:3.0.6:compile
+[INFO] |  |  \- javassist:javassist:jar:3.11.0.GA:compile
+[INFO] |  +- commons-fileupload:commons-fileupload:jar:1.2.2:compile
+[INFO] |  +- commons-io:commons-io:jar:2.0.1:compile
+[INFO] |  \- com.sun:tools:jar:1.5.0:system
+[INFO] +- org.apache.struts:struts2-spring-plugin:jar:2.3.8:compile
+[INFO] +- org.apache.struts:struts2-convention-plugin:jar:2.3.8:compile
+[INFO] +- org.springframework:spring-context:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-context-support:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-aop:jar:3.2.4.RELEASE:compile
+[INFO] |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] +- org.springframework:spring-beans:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-expression:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-core:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-orm:jar:3.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-jdbc:jar:3.2.4.RELEASE:compile
+[INFO] |  \- org.springframework:spring-tx:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-webmvc:jar:3.2.4.RELEASE:compile
+[INFO] |  \- org.springframework:spring-web:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-test:jar:3.2.4.RELEASE:test
+[INFO] +- org.aspectj:aspectjrt:jar:1.6.7:compile
+[INFO] +- org.aspectj:aspectjweaver:jar:1.7.2:compile
+[INFO] +- asm:asm:jar:3.3:compile
+[INFO] +- asm:asm-commons:jar:3.3:compile
+[INFO] |  \- asm:asm-tree:jar:3.3:compile
+[INFO] +- cglib:cglib:jar:2.2.2:compile
+[INFO] +- com.opensymphony.quartz:com.springsource.org.quartz:jar:1.6.2:compile
+[INFO] \- junit:junit:jar:4.9:test
+[INFO]    \- org.hamcrest:hamcrest-core:jar:1.1:test
+[INFO] ------------------------------------------------------------------------
+[INFO] Building myhome-web
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[INFO] snapshot ACRusher:myhome-biz:1.0-SNAPSHOT: checking for updates from central
+[INFO] snapshot ACRusher:myhome-biz:1.0-SNAPSHOT: checking for updates from localcentral
+[INFO] snapshot ACRusher:myhome-biz:1.0-SNAPSHOT: checking for updates from localthirdparty
+[INFO] [dependency:tree {execution: default-cli}]
+[WARNING] POM for 'org.codehaus.jackson:jackson-core-asl:pom:1.9.13:compile' is invalid.
+
+Its dependencies (if any) will NOT be available to the current build.
+[WARNING] POM for 'org.codehaus.jackson:jackson-mapper-asl:pom:1.9.13:compile' is invalid.
+
+Its dependencies (if any) will NOT be available to the current build.
+[INFO] ACRusher:myhome-struts-web:war:1.0-SNAPSHOT
+[INFO] +- ACRusher:myhome-biz:jar:1.0-SNAPSHOT:compile
+[INFO] |  \- com.kdb:myhome-util:jar:1.0-SNAPSHOT:compile
+[INFO] |     \- com.google.guava:guava:jar:17.0:compile
+[INFO] +- org.mybatis:mybatis:jar:3.2.2:compile
+[INFO] +- org.mybatis:mybatis-spring:jar:1.2.1:compile
+[INFO] +- org.codehaus.jackson:jackson-core-asl:jar:1.9.13:compile
+[INFO] +- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13:compile
+[INFO] +- org.apache.commons:commons-lang3:jar:3.1:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.11:compile
+[INFO] +- org.slf4j:jcl-over-slf4j:jar:1.5.11:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.5.11:compile
+[INFO] +- log4j:log4j:jar:1.2.15:compile
+[INFO] |  \- javax.mail:mail:jar:1.4:compile
+[INFO] |     \- javax.activation:activation:jar:1.1:compile
+[INFO] +- commons-logging:commons-logging:jar:1.1:compile
+[INFO] |  +- logkit:logkit:jar:1.0.1:compile
+[INFO] |  +- avalon-framework:avalon-framework:jar:4.1.3:compile
+[INFO] |  \- javax.servlet:servlet-api:jar:2.3:compile
+[INFO] +- commons-lang:commons-lang:jar:2.6:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.5.5-Final:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.1:compile
+[INFO] |  +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  \- javax.transaction:jta:jar:1.1:compile
+[INFO] +- org.hibernate:hibernate-annotations:jar:3.5.5-Final:compile
+[INFO] |  +- org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final:compile
+[INFO] |  \- org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.0.Final:compile
+[INFO] +- org.hibernate:hibernate-ehcache:jar:3.5.5-Final:compile
+[INFO] |  \- net.sf.ehcache:ehcache:jar:1.5.0:compile
+[INFO] |     +- backport-util-concurrent:backport-util-concurrent:jar:3.1:compile
+[INFO] |     \- net.sf.jsr107cache:jsr107cache:jar:1.0:compile
+[INFO] +- mysql:mysql-connector-java:jar:5.1.27:compile
+[INFO] +- org.apache.struts:struts2-core:jar:2.3.8:compile
+[INFO] |  +- org.apache.struts.xwork:xwork-core:jar:2.3.8:compile
+[INFO] |  +- org.freemarker:freemarker:jar:2.3.19:compile
+[INFO] |  +- ognl:ognl:jar:3.0.6:compile
+[INFO] |  |  \- javassist:javassist:jar:3.11.0.GA:compile
+[INFO] |  +- commons-fileupload:commons-fileupload:jar:1.2.2:compile
+[INFO] |  +- commons-io:commons-io:jar:2.0.1:compile
+[INFO] |  \- com.sun:tools:jar:1.5.0:system
+[INFO] +- org.apache.struts:struts2-spring-plugin:jar:2.3.8:compile
+[INFO] +- org.apache.struts:struts2-convention-plugin:jar:2.3.8:compile
+[INFO] +- org.springframework:spring-context:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-context-support:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-aop:jar:3.2.4.RELEASE:compile
+[INFO] |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] +- org.springframework:spring-beans:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-expression:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-core:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-orm:jar:3.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-jdbc:jar:3.2.4.RELEASE:compile
+[INFO] |  \- org.springframework:spring-tx:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-webmvc:jar:3.2.4.RELEASE:compile
+[INFO] |  \- org.springframework:spring-web:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-test:jar:3.2.4.RELEASE:test
+[INFO] +- org.aspectj:aspectjrt:jar:1.6.7:compile
+[INFO] +- org.aspectj:aspectjweaver:jar:1.7.2:compile
+[INFO] +- asm:asm:jar:3.3:compile
+[INFO] +- asm:asm-commons:jar:3.3:compile
+[INFO] |  \- asm:asm-tree:jar:3.3:compile
+[INFO] +- cglib:cglib:jar:2.2.2:compile
+[INFO] +- com.opensymphony.quartz:com.springsource.org.quartz:jar:1.6.2:compile
+[INFO] \- junit:junit:jar:4.9:test
+[INFO]    \- org.hamcrest:hamcrest-core:jar:1.1:test
+[INFO] ------------------------------------------------------------------------
+[INFO] Building myhome-spring-web
+[INFO]    task-segment: [dependency:tree]
+[INFO] ------------------------------------------------------------------------
+[INFO] [dependency:tree {execution: default-cli}]
+[WARNING] POM for 'org.codehaus.jackson:jackson-core-asl:pom:1.9.13:compile' is invalid.
+
+Its dependencies (if any) will NOT be available to the current build.
+[WARNING] POM for 'org.codehaus.jackson:jackson-mapper-asl:pom:1.9.13:compile' is invalid.
+
+Its dependencies (if any) will NOT be available to the current build.
+[INFO] ACRusher:myhome-spring-web:war:1.0-SNAPSHOT
+[INFO] +- ACRusher:myhome-biz:jar:1.0-SNAPSHOT:compile
+[INFO] |  \- com.kdb:myhome-util:jar:1.0-SNAPSHOT:compile
+[INFO] |     \- com.google.guava:guava:jar:17.0:compile
+[INFO] +- org.mybatis:mybatis:jar:3.2.2:compile
+[INFO] +- org.mybatis:mybatis-spring:jar:1.2.1:compile
+[INFO] +- org.codehaus.jackson:jackson-core-asl:jar:1.9.13:compile
+[INFO] +- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13:compile
+[INFO] +- org.apache.commons:commons-lang3:jar:3.1:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.5.11:compile
+[INFO] +- org.slf4j:jcl-over-slf4j:jar:1.5.11:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.5.11:compile
+[INFO] +- log4j:log4j:jar:1.2.15:compile
+[INFO] |  \- javax.mail:mail:jar:1.4:compile
+[INFO] |     \- javax.activation:activation:jar:1.1:compile
+[INFO] +- commons-logging:commons-logging:jar:1.1:compile
+[INFO] |  +- logkit:logkit:jar:1.0.1:compile
+[INFO] |  +- avalon-framework:avalon-framework:jar:4.1.3:compile
+[INFO] |  \- javax.servlet:servlet-api:jar:2.3:compile
+[INFO] +- commons-lang:commons-lang:jar:2.6:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.5.5-Final:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.1:compile
+[INFO] |  +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  \- javax.transaction:jta:jar:1.1:compile
+[INFO] +- org.hibernate:hibernate-annotations:jar:3.5.5-Final:compile
+[INFO] |  +- org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final:compile
+[INFO] |  \- org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.0.Final:compile
+[INFO] +- org.hibernate:hibernate-ehcache:jar:3.5.5-Final:compile
+[INFO] |  \- net.sf.ehcache:ehcache:jar:1.5.0:compile
+[INFO] |     +- backport-util-concurrent:backport-util-concurrent:jar:3.1:compile
+[INFO] |     \- net.sf.jsr107cache:jsr107cache:jar:1.0:compile
+[INFO] +- mysql:mysql-connector-java:jar:5.1.27:compile
+[INFO] +- org.apache.struts:struts2-core:jar:2.3.8:compile
+[INFO] |  +- org.apache.struts.xwork:xwork-core:jar:2.3.8:compile
+[INFO] |  +- org.freemarker:freemarker:jar:2.3.19:compile
+[INFO] |  +- ognl:ognl:jar:3.0.6:compile
+[INFO] |  |  \- javassist:javassist:jar:3.11.0.GA:compile
+[INFO] |  +- commons-fileupload:commons-fileupload:jar:1.2.2:compile
+[INFO] |  +- commons-io:commons-io:jar:2.0.1:compile
+[INFO] |  \- com.sun:tools:jar:1.5.0:system
+[INFO] +- org.apache.struts:struts2-spring-plugin:jar:2.3.8:compile
+[INFO] +- org.apache.struts:struts2-convention-plugin:jar:2.3.8:compile
+[INFO] +- org.springframework:spring-context:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-context-support:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-aop:jar:3.2.4.RELEASE:compile
+[INFO] |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] +- org.springframework:spring-beans:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-expression:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-core:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-orm:jar:3.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-jdbc:jar:3.2.4.RELEASE:compile
+[INFO] |  \- org.springframework:spring-tx:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-webmvc:jar:3.2.4.RELEASE:compile
+[INFO] |  \- org.springframework:spring-web:jar:3.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-test:jar:3.2.4.RELEASE:test
+[INFO] +- org.aspectj:aspectjrt:jar:1.6.7:compile
+[INFO] +- org.aspectj:aspectjweaver:jar:1.7.2:compile
+[INFO] +- asm:asm:jar:3.3:compile
+[INFO] +- asm:asm-commons:jar:3.3:compile
+[INFO] |  \- asm:asm-tree:jar:3.3:compile
+[INFO] +- cglib:cglib:jar:2.2.2:compile
+[INFO] +- com.opensymphony.quartz:com.springsource.org.quartz:jar:1.6.2:compile
+[INFO] \- junit:junit:jar:4.9:test
+[INFO]    \- org.hamcrest:hamcrest-core:jar:1.1:test
+[INFO] 
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] ------------------------------------------------------------------------
+[INFO] myhome ................................................ SUCCESS [2.981s]
+[INFO] myhome-util ........................................... SUCCESS [0.121s]
+[INFO] myhome-biz ............................................ SUCCESS [1.215s]
+[INFO] myhome-web ............................................ SUCCESS [23.317s]
+[INFO] myhome-spring-web ..................................... SUCCESS [0.219s]
+[INFO] ------------------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESSFUL
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 29 seconds
+[INFO] Finished at: Mon Dec 21 13:43:28 CST 2015
+[INFO] Final Memory: 24M/236M
+[INFO] ------------------------------------------------------------------------

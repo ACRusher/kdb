@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kdb.dao.mapper.OperatorPackageMapper">
+
+        <resultMap id="OperatorPackage" type="com.kdb.model.OperatorPackage">
+                <result column="id" property="id" javaType="java.lang.Long" jdbcType="BIGINT"/>
+                <result column="gmt_create" property="gmtCreate" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+                <result column="gmt_modify" property="gmtModify" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+                <result column="operator_id" property="operatorId" javaType="java.lang.Long" jdbcType="BIGINT"/>
+                <result column="service_type" property="serviceType" javaType="java.lang.String" jdbcType="VARCHAR"/>
+                <result column="fee" property="fee" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+                <result column="time" property="time" javaType="java.lang.String" jdbcType="VARCHAR" />
+                <result column="description" property="description" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        </resultMap>
+
+        <sql id="allColumns">
+                id , gmt_create , gmt_modify ,
+                operator_id , service_type , fee ,
+                time , description
+        </sql>
+
+        <insert id="insert" parameterType="com.kdb.model.OperatorPackage">
+                insert into operator_package (
+                <include refid="allColumns"/>
+                ) VALUES (
+                #{id} , #{gmtCreate} , #{gmtModify} ,
+                #{operatorId} , #{serviceType} , #{fee} ,
+                #{time} , #{description}
+                )
+            <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+                SELECT last_insert_id() as id
+            </selectKey>
+        </insert>
+
+        <delete id="deleteById" parameterType="java.lang.Long" >
+                delete from operator_package
+                <where>
+                        id = #{id}
+                </where>
+        </delete>
+
+        <update id="update" parameterType="com.kdb.model.OperatorPackage">
+                update operator_package
+                <set>
+                        <if test="gmtCreate!=null">
+                                gmt_create = #{gmtCreate} ,
+                        </if>
+                        <if test="gmtModify!=null">
+                                gmt_modify = #{gmtModify} ,
+                        </if>
+                        <if test="operatorId!=null">
+                                operator_id = #{operatorId},
+                        </if>
+                        <if test="serviceType!=null">
+                                service_type = #{serviceType},
+                        </if>
+                        <if test="fee!=null">
+                                fee = #{fee},
+                        </if>
+                        <if test="time!=null">
+                                time = #{time},
+                        </if>
+                        <if test="description!=null">
+                                description = #{description},
+                        </if>
+                </set>
+                <where>
+                        id = #{id}
+                </where>
+        </update>
+
+        <select id="getByCondition" parameterType="java.util.Map" resultMap="OperatorPackage">
+                SELECT
+                <include refid="allColumns"/>
+                FROM operator_package
+                <where>
+                        <foreach collection="_where_key" item="andList" separator="or" open="(" close=")">
+                                <foreach collection="andList" item="filter" open="(" close=")" separator="and">
+                                        <choose>
+                                                <when test="filter.LT()">
+                                                        <![CDATA[
+              ${filter.column} < #{filter.value}
+              ]]>
+                                                </when>
+                                                <when test="filter.LE()">
+                                                        <![CDATA[
+              ${filter.column} <= #{filter.value}
+              ]]>
+                                                </when>
+                                                <when test="filter.GT()">
+                                                        <![CDATA[
+              ${filter.column} > #{filter.value}
+              ]]>
+                                                </when>
+                                                <when test="filter.GE()">
+                                                        <![CDATA[
+              ${filter.column} >= #{filter.value}
+              ]]>
+                                                </when>
+                                                <when test="filter.EQ()">
+                                                        <![CDATA[
+              ${filter.column} = #{filter.value}
+              ]]>
+                                                </when>
+                                                <when test="filter.LIKE()">
+                                                        <![CDATA[
+              ${filter.column} LIKE #{filter.value}
+              ]]>
+                                                </when>
+                                        </choose>
+                                </foreach>
+                        </foreach>
+                </where>
+                <if test="_order_map_list != null">
+                        <trim prefix="order by " suffix=" " suffixOverrides=",">
+                                <foreach collection="_order_map_list" item="orderMap" index="index" separator=" ">
+                                        <if test="orderMap._asc_ !=null">
+                                                ${orderMap._column_name} ASC ,
+                                        </if>
+                                        <if test="orderMap._desc_ !=null">
+                                                ${orderMap._column_name} DESC ,
+                                        </if>
+                                </foreach>
+                        </trim>
+                </if>
+                <if test="_limit_offset !=null and _limit_total !=null ">
+                        LIMIT ${_limit_offset} , ${_limit_total}
+                </if>
+        </select>
+</mapper>

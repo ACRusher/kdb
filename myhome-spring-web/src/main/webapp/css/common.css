@@ -1,0 +1,821 @@
+*{font-family: "Microsoft YaHei" ! important;}
+p{padding: 0;margin: 0;}
+.m15{margin: 15px 0;}
+.fs12{
+    font-size: 12px;
+}
+ul, li{ list-style: none;padding: 0;margin: 0;}
+a{text-decoration: none;}
+a:focus{text-decoration: none;}
+.fs_12{font-size: 12px;}
+.color1{color: #fd8b2d;}
+.star{color: #f5953d;font-size: 27px;line-height: 30px;}
+.m15{margin: 15px;}
+.m0{margin: 0;}
+.pd15{padding: 15px;}
+.pd10{padding: 10px;}
+.p0{padding: 0;}
+.pb15{padding-bottom: 15px;}
+.bb{border-bottom:1px solid #ccc;}
+.text_c{text-align: center;}
+input{border-radius: 0;}
+
+
+body{color: #333;}
+/*第一页开始*/
+.big_title{
+    width: 100%;
+}
+
+.back{
+    width: 24px;
+    position: absolute;
+    left: 20px;
+}
+
+#get-more{
+    border: 0;
+    background-color: #e5e5e5;
+    text-align: center;
+}
+
+.service{
+    color: #4bc0e3;
+    background-color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+.service a{
+    color:#4bc0e3;
+}
+.service .serviceItem{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+.service p{
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+
+.service_1{
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+.service_1 > div{
+    margin: 0 5px;
+    background-color: #5b9aef;
+    padding: 25px 0px;
+    font-size: 18px;
+}
+#nav_list{
+    margin: 0;
+    border-top: 1px solid #ccc;
+}
+#nav_list .active a{
+    background-color: #4bc0e3;
+    border-color: #4bc0e3;
+    color: #fff;
+    border-radius: 0;
+}
+#nav_list li a{
+    margin-bottom: 0;
+    color: #4bc0e3;
+    background-color: #fff;
+    font-size: 14px;
+    padding: 0;
+    padding-top: 2px;
+}
+#nav_list li img{
+    height: 25px;
+}
+/*第一页结束*/
+/*第二页开始*/
+.title{
+    position: relative;
+    background-color: #4bc0e3;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.title .right_tip{
+    position: absolute;
+    right: 15px;
+    font-size: 14px;
+    top: 15px;
+    color: #fff;
+}
+
+.title .tip{
+    position: absolute;
+    font-size: 14px;
+    line-height: 25px;
+    right: 20px;
+    bottom: 5px;
+    color: #fff;
+    padding-right: 28px;
+    background-image: url(../images/wen.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    text-decoration: none;
+}
+.sousuo{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.sousuo .form-group{
+    display: inline-block;
+}
+.selection .cur a{
+    background-color: #4bc0e3;
+    color: #fff;
+    border:1px solid #4bc0e3;
+}
+
+.res_list{
+    margin-top: 20px;
+    padding: 0 15px;
+}
+.res_list .item{
+    background-color: #f2f4f7;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+.res_list li:last-child{
+    margin-bottom: 65px;
+}
+.res_list .info{
+    position: relative;
+    padding: 10px 0;
+}
+.res_list .info img{
+    width: 48px;
+    float: left;
+    margin-right: 15px;
+    margin-top: -10px;
+}
+.info p{
+    line-height: 22px;
+}
+.info .tag{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+.item .bref{
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: -7px;
+}
+/*第二页结束*/
+/*第三页开始*/
+#topic-page .form-control{
+    width: 80%;
+    margin-left: 10%;
+}
+#topic-wrapper{
+    margin-left: 15%;
+}
+#topic-wrapper ul{
+    width: 80%;
+}
+#topic{
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    color: #333;
+    text-decoration: none;
+}
+#topic .caret{
+    position: absolute;
+    right: 5px;
+    margin-top: 8px;
+    font-size: 20px;
+    border-width: 6px;
+}
+
+.title-wrapper input{
+    margin-top: 10px;
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #ccc;
+}
+/*第三页结束*/
+
+/*第四页开始*/
+#page4 .top{
+    position: relative;
+    margin-top: -3px;
+}
+#page4 .sousuo{
+    position: absolute;
+    top: 30px;
+    width: 100%;
+
+}
+#page4 .sousuo > .form-group{width: 70%;}
+.filled{
+    width: 100%;
+}
+#page4 .media-wrapper{margin-bottom: 60px;}
+#page4 .media{padding: 5px;    position: relative;
+    margin: 15px;
+    border-bottom: 1px solid #ccc;}
+#page4 .media .media-body{}
+#page4 .media .media-body h4{margin: 0;font-weight: bold;}
+
+#page4 .price{font-size:14px;}
+#page4 .price span{color:#f5953d;}
+#page4 .detail-tip{    position: absolute;
+    right: 30px;
+    bottom: 50%;width: 24px;}
+/*第四页结束*/
+
+/*第五页开始*/
+#page5{
+
+}
+#page5 .desc{
+    padding: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+#page5 .desc span{color:#f5953d;padding-right: 20px;}
+#page5 .desc a{float: right; color: #fff;background-color: #f5953d;padding: 2px 10px;margin-right: 15px;}
+#page5 .detail{
+    margin: 15px;
+}
+#page5 .detail li{
+    color: #333;
+    font-weight: bold;
+    padding-bottom: 10px;
+    margin: 0 -10px;
+}
+#page5 .detail li span{    font-size: 12px;
+    display: inline-block;
+    font-weight: 100;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 2px 3px;
+    margin-right: 5px;
+    margin-bottom: 3px;}
+#page5 .panel-heading{background-color: #4bc0e3;
+    color: #fff;
+    border-radius: 0;
+    border: 0;}
+#page5 .panel-body{margin-bottom: 20px;}
+#page5 .panel-body li{
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+/*第五页结束*/
+
+/*第九页开始*/
+#page9 .panel-heading{background-color: #4bc0e3;
+    color: #fff;
+    border-radius: 0;
+    border: 0;}
+#page9 .panel-body{margin-bottom: 20px;}
+#page9 .panel-body li{
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+/*第九页结束*/
+/*第六页开始*/
+#page6 .title{
+    text-align: left;
+    padding-left: 33px;
+    font-size: 16px;
+}
+#page6 form{padding: 10px;}
+#page6 form .name{
+    color: #4bc0e3;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#page6 form input[type='radio']{
+    margin-right: 5px;
+}
+#page6 button[type='submit']{
+    background-color: #4bc0e3;
+    color: #fff;
+    border-color: #4bc0e3;
+    margin-top: 20px;
+    font-size: 18px;
+}
+/*第六页结束*/
+
+/*第七页开始*/
+#page7 .content{
+    margin-top: 5em;
+    padding-top: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-bottom: 1em;
+    box-shadow: 2px 2px 3px #ccc;
+}
+#page7 .media-body{
+    font-size: 0.825em;
+    padding-top: 13px;
+}
+#page7 a[type='button']{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 1em;
+    background-color: #fe8400;
+    border: 1px solid #fe8400;
+    color: #fff;}
+#page7 .row > img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+/*第七页结束*/
+/*第八页开始*/
+#page8 input{
+    border-radius: 0;
+}
+#page8 .title .cha{
+    color: #f5953d;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    text-decoration: none;
+}
+#page8 .form-group label{
+    padding-right: 0;
+    padding-top: 5px;
+}
+#page8 .btn{
+    background-color: #4bc0e3;
+    color: #fff;
+    border-color: #4bc0e3;
+    margin-top: 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+#page8 button[type='submit']{
+    background-color: #4bc0e3;
+    color: #fff;
+    border-color: #4bc0e3;
+    margin-top: 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/*第八页结束*/
+/*第十二页开始*/
+#page12 .cont{
+    margin: 5em 2em;
+    padding: 2em;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #333;
+}
+#page12 .btn{
+    background-color: #f5953d;
+    color: #fff;
+    font-size: 16px;
+    border: 1px solid #f5953d;
+}
+/*第十二页结束*/
+
+/*第十三页开始*/
+#page13 .wrapper{
+    padding: 15px 0 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+#page13 .wrapper span{
+    vertical-align: top;
+    display: inline-block;
+    margin-top: -6px;
+    margin-left: 10px;
+}
+#page13 .title .commit{
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    right: 15px;
+    top: 11px;
+    text-decoration: none;
+    background-color: #f5953d;
+    padding: 2px 4px;
+}
+#page13 .service_score li{
+    line-height: 31px;
+    font-weight: bold;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+#page13 .service_score li div:nth-child(2){
+    padding-left: 3px;
+}
+#page13 .service_score li div:last-child{
+    color: #cccccc;
+}
+#page13 .panel{
+    padding-bottom: 15px;
+    border: none;
+    margin-bottom: 0;
+    box-shadow: none;
+}
+#page13 .panel .cur a{
+    background-color: #4bc0e3;
+    color: #fff;
+    border: 1px solid #4bc0e3;
+}
+#page13 .panel-heading{
+    margin: 5px 10px;
+    padding: 5px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+#page13 .panel-body{
+    padding: 0;
+}
+#page13 .panel-body div{
+    padding: 5px;
+}
+#page13 .panel-body a{
+    font-size: 12px;
+    width: 100%;
+}
+#page13 button[type='submit']{
+    background-color: #4bc0e3;
+    color: #fff;
+    border-color: #4bc0e3;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+#page13 #all_score{
+    line-height: 30px;
+}
+#page13 #all_score span{
+    padding: 0;
+    margin: 0;
+}
+/*第十三页结束*/
+
+/*第十六页开始*/
+#page16 .media-body p{
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+#page16 .media-body p span{
+    float: right;
+    min-width: 68px;
+    text-align: center;
+}
+#page16 .bac{
+    background-image: url(../images/bac_2.png);
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-repeat: no-repeat;
+}
+/*第十六页结束*/
+
+/*第十七页开始*/
+#page17 .res_list .item{
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+#page17 .res_list .info{
+    margin-bottom: 10px;
+}
+#page17 .res_list .info .tag{
+    background-color: #4bc0e3;
+    color: #fff;
+    padding: 5px 15px;
+    right: 0;
+}
+#page17 .res_list .bref{
+    background-color: #e5e5e5;
+    padding: 5px 0;
+    font-size: 14px;
+    margin: 0 -6px;
+    font-weight: 100;
+}
+/*第十七页结束*/
+/*第十八页开始*/
+#page18 .title span:first-child{
+    position: absolute;
+    left: 15px;
+}
+#page18 .title span:last-child{
+    position: absolute;
+    right: 15px;
+}
+#page18 form{
+    padding: 15px;
+}
+#page18 .img_tip{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-right: 0;
+}
+#page18 .img_tip img{
+    height: 22px;
+}
+#page18 .input-group{
+    margin-bottom: 15px;
+}
+#page18 button[type='submit']{
+    background-color: #fe8400;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #fe8400;
+    box-shadow: none;
+}
+#page18 .retrieve_pass{
+    float: right;
+    margin-right: 8%;
+    color: #4bc0e3;
+}
+#page18 .other_login{
+    margin: 50px 15px 0px 15px;
+    text-align: center;
+}
+#page18 .other_login > p:first-child{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+#page18 .other_login .login_list a{
+    color:#333;
+    font-size: 16px;
+    padding: 0;
+}
+#page18 .other_login .login_list img{
+    width: 75%;
+    height: 62px;
+}
+/*第十八页结束*/
+/*第十九页开始*/
+.title .cancel{
+    position: absolute;
+    left: 15px;
+    color: #fff;
+}
+#page19 .testcode{
+    float: left;
+    width: 50%;
+}
+
+#page19 a[type='button']{
+    margin-top: 10px;
+    background-color: #fe8400;
+    color: #fff;
+    border: 1px solid #fe8400;
+}
+#page19 button[type='submit']{
+    background-color: #fe8400;
+    color: #fff;
+    font-size: 16px;
+    border: 1px solid #fe8400;
+}
+/*第十九页结束*/
+
+/*第二十页开始*/
+#page20 .testcode{
+    float: left;
+    width: 50%;
+}
+#page20 a[type='button']{
+    margin-top: 10px;
+    background-color: #fe8400;
+    color: #fff;
+    border: 1px solid #fe8400;
+}
+#page20 button[type='submit']{
+    background-color: #fe8400;
+    color: #fff;
+    font-size: 16px;
+    border: 1px solid #fe8400;
+}
+/*第二十页结束*/
+/*第二十一页开始*/
+#page21 .wrapper{
+    margin-bottom: 15px;
+}
+#page21 .wrapper .col-xs-6{
+    padding-right: 0;
+}
+#page21 .wrapper h4{
+    text-align: center;
+    margin-bottom: 15px;
+}
+#page21 li{padding-bottom: 15px;}
+#page21 li span{
+    display: inline-block;
+    background-image: url(../images/cesu_left1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: 45px;
+    line-height: 36px;
+    padding-right: 5px;
+}
+#page21 li span:nth-child(1){
+
+}
+#page21 .outer{
+    margin: 0 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #4bc0e3;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+}
+#page21 .outer img{
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+#page21 .outer .col-xs-8{
+    text-align: center;
+    padding-left: 0;
+    margin-left: 10px;
+    line-height: 25px;
+}
+#page21 button[type='submit']{
+    background-color: #fe8400;
+    color: #fff;
+    font-size: 16px;
+    border: 1px solid #fe8400;
+}
+/*第二十一页结束*/
+/*第二十四页结束*/
+#page24 .person-info{
+    background-image: url(../images/person_info.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+}
+#page24 .person-info img{
+    width: 64px;
+}
+#page24 .person-info span{
+    color: #fe8400;
+}
+#page24 .media{
+    margin: 15px;
+}
+#page24 .media-body{
+    line-height: 48px;
+    text-decoration: none;
+}
+#page24 .media-body span {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+    background-image: url(../images/right.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 24px;
+    color: #333333;
+    text-decoration: none;
+}
+/*第二十四页结束*/
+
+/*第二十六页开始*/
+#page26 .content{
+    margin-top: 5em;
+    padding-top: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-bottom: 1em;
+    box-shadow: 2px 2px 3px #ccc;
+}
+#page26 .media-body{
+    font-size: 0.825em;
+    padding-top: 13px;
+}
+#page26 a[type='button']{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 1em;
+    background-color: #fe8400;
+    border: 1px solid #fe8400;
+    color: #fff;}
+#page26 .row > img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+/*第二十六页结束*/
+/*第1_2页开始*/
+#page1_2 form{
+    margin-top: 1em;
+}
+#page1_2 .speed_select{
+    position: relative;
+    padding-right: 36px;
+}
+#page1_2 .speed_select img{
+    position: absolute;
+    right: 0;
+    top: 2px;
+    width: 28px;
+}
+#page1_2 .test_info{
+    text-align: center;
+}
+#page1_2 .test_info img{
+    width: 75%;
+}
+#page1_2 .jindu{
+    margin-left: 7%;
+    margin-top: 1em;
+}
+#page1_2 .jindu img{
+    width: 5%;
+}
+#page1_2 .jindu .pro{
+    width: 75%;
+    height: 1em;
+    background-color: #4bc0e3;
+    border-radius: 6px;
+    display: inline-block;
+    vertical-align: middle;
+}
+#page1_2 #nav_list a{
+    padding:0.825em;
+    font-size: 16px;
+}
+#page1_2 .biao_pan{
+    position: relative;
+    margin-top: 2em;
+    background-image: url(../images/biao_pan.png);
+    width: 100%;
+    height: 18em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+#page1_2 .biao_pan img{
+    width: 10em;
+    transform: rotate(-14deg);
+    position: absolute;
+    transform-origin: 80% 26% 0px;
+    top: 7.8em;
+    left: 15%;
+}
+/*第1_2页结束*/
+/*第二十五页开始*/
+#page25{}
+#page25{}
+#page25 .title{
+    position: absolute;
+    padding-left: 31px;
+    padding-right: 10px;
+    top: 1em;
+    font-size: 16px;
+    color: #fff;
+    background-color: transparent;
+}
+#page25 .top{
+    position: relative;
+    margin-top: -3px;
+}
+#page25 .sousuo{
+    position: absolute;
+    top: 13em;
+    width: 100%;
+
+}
+#page25 .sousuo .btn{
+    background-image: url(../images/position.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+#page25 .sousuo > .form-group{width: 70%;}

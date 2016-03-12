@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!--配置placeholder过滤文件-->
+    <!--<property file="app.properties" />-->
+    <!--配置一个FileAppender-->
+    <appender name="DAILY_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>d:/data/logs/myhome/myhome.log</file>
+        <encoder>
+            <pattern>[%-5p] [%d{yyyy-MM-dd HH:mm:ss}] [%C{1}:%M:%L] %m%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/data/logs/myhome/myhome.log.%d{yyyy-MM-dd}</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+    <!--配置一个异步APPENDER 可以提高并发打日志情景下的性能-->
+    <appender name ="DAILY_ASYNC_LOG" class= "ch.qos.logback.classic.AsyncAppender">
+        <!-- 不丢失日志.默认的,如果队列的80%已满,则会丢弃TRACT、DEBUG、INFO级别的日志 -->
+        <discardingThreshold >0</discardingThreshold>
+        <!-- 更改默认的队列的深度,该值会影响性能.默认值为256 -->
+        <queueSize>512</queueSize>
+        <includeCallerData>true</includeCallerData>
+        <!-- 添加附加的appender,最多只能添加一个 -->
+        <appender-ref ref ="DAILY_LOG"/>
+    </appender>
+    <!--配置一个FileAppender-->
+    <appender name="ROOT_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>/data/logs/myhome/root.log</file>
+        <encoder>
+            <pattern>[%-5p] [%d{yyyy-MM-dd HH:mm:ss}] [%C{1}:%M:%L] %m%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/data/logs/myhome/root.log.%d{yyyy-MM-dd}</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+    <!--配置一个异步APPENDER 可以提高并发打日志情景下的性能-->
+    <appender name ="ROOT_ASYNC_LOG" class= "ch.qos.logback.classic.AsyncAppender">
+        <!-- 不丢失日志.默认的,如果队列的80%已满,则会丢弃TRACT、DEBUG、INFO级别的日志 -->
+        <discardingThreshold >0</discardingThreshold>
+        <!-- 更改默认的队列的深度,该值会影响性能.默认值为256 -->
+        <queueSize>512</queueSize>
+        <includeCallerData>true</includeCallerData>
+        <!-- 添加附加的appender,最多只能添加一个 -->
+        <appender-ref ref ="ROOT_LOG"/>
+    </appender>
+    <!--配置邮件服务 因为代码托管在github 注意线上部署时再写入 username pwd-->
+    <appender name="MAIL" class="ch.qos.logback.classic.net.SMTPAppender">
+        <Threshold>ERROR</Threshold>
+        <Subject>kdb-系统日志</Subject>
+        <Password>job_zhou2214</Password>
+        <Username>zhouxiliang1988</Username>
+        <To>job_zhou2214@163.com</To>
+        <smtpHost>smtp.163.com</smtpHost>
+        <cyclicBufferTracker class="ch.qos.logback.core.spi.CyclicBufferTrackerImpl">
+            <bufferSize>1</bufferSize>
+        </cyclicBufferTracker>
+        <From>zhouxiliang1988@163.com</From>
+        <layout class="ch.qos.logback.classic.html.HTMLLayout">
+            <ConversionPattern>[ErrorMessage] %d{yyyy-MM-dd HH:mm:ss} - %C{1}:%M:%L %m%n</ConversionPattern>
+        </layout>
+    </appender>
+
+    <!--控制台配置-->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <Target>System.out</Target>
+        <encoder>
+            <pattern>[%-5p] [%d{yyyy-MM-dd HH:mm:ss:SSS}] [%C{1}:%M:%L] %m%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+    </appender>
+
+    <logger name="com.kdb" level="INFO" additivity="false">
+        <appender-ref ref="DAILY_ASYNC_LOG"/>
+        <!--业务错误 需要给团队发邮件-->
+        <appender-ref ref="MAIL"/>
+    </logger>
+
+    <logger name="console" level="INFO" additivity="false">
+        <appender-ref ref="CONSOLE" />
+    </logger>
+
+    <root level="INFO">
+        <!--只有开发模式才能打开控制台日志 切记-->
+        <appender-ref ref="CONSOLE"/>
+        <!--配置单独的rootLog-->
+        <appender-ref ref="ROOT_ASYNC_LOG"/>
+    </root>
+
+</configuration>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+    <context:component-scan base-package="zxl.webapp.actions"/>
+
+    <!--<bean class="zxl.webapp.actionss.HelloAction"/>-->
+
+    <!--<bean name="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">-->
+        <!--<property name="driver" value="com.mysql.jdbc.Driver" />-->
+        <!--<property name="url" value="jdbc:mysql://localhost:3306/test" />-->
+        <!--<property name="username" value="root" />-->
+        <!--<property name="password" value="" />-->
+    <!--</bean>-->
+
+    <!--<bean name="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">-->
+        <!--<property name="dataSource" ref="dataSource"/>-->
+
+        <!--<property name="namingStrategy">-->
+            <!--<bean class="org.hibernate.cfg.ImprovedNamingStrategy"/>-->
+        <!--</property>-->
+        <!--<property name="packagesToScan" >-->
+            <!--<list>-->
+                <!--<value>zxl.vo</value>-->
+            <!--</list>-->
+        <!--</property>-->
+        <!--<property name="hibernateProperties">-->
+            <!--<props>-->
+                <!--<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>-->
+                <!--<prop key="show_sql">true</prop>-->
+                <!--<prop key="format_sql">false</prop>-->
+                <!--<prop key="cache.use_second_level_cache">false</prop>-->
+            <!--</props>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!--<bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">-->
+        <!--<property name="sessionFactory" ref="sessionFactory"></property>-->
+    <!--</bean>-->
+    <!--<tx:annotation-driven transaction-manager="txManager"/>-->
+
+    <import resource="aop-beans.xml"/>
+    <import resource="applicationContext-cronJob.xml"/>
+
+</beans>

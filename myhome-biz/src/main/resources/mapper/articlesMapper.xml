@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kdb.dao.mapper.ArticlesMapper">
+
+    <resultMap id="Articles" type="com.kdb.model.Articles">
+        <result column="id" property="id" javaType="java.lang.Long" jdbcType="BIGINT"/>
+        <result column="gmt_create" property="gmtCreate" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+        <result column="gmt_modify" property="gmtModify" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+        <result column="title" property="title" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="content" property="content" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="pictures" property="pictures" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="tag" property="tag" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="author_id" property="authorId" javaType="java.lang.Long" jdbcType="BIGINT"/>
+        <result column="author_name" property="authorName" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="author_picture" property="authorPicture" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="type" property="type" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="allColumns">
+                id , gmt_create , gmt_modify ,
+                title , content , pictures ,
+                tag, author_id ,author_name ,
+                 author_picture , type
+        </sql>
+
+    <insert id="insert" parameterType="com.kdb.model.Articles">
+        insert into articles (
+        <include refid="allColumns"/>
+        ) values (
+        #{id} , #{gmtCreate} , #{gmtModify} ,
+        #{title} , #{content} , #{pictures} ,
+        #{tag} , #{authorId} ,#{authorName} ,
+        #{authorPicture}, #{type}
+        )
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+            SELECT last_insert_id() as id
+        </selectKey>
+    </insert>
+
+    <delete id="deleteById" parameterType="java.lang.Long">
+        delete from articles
+        <where>
+            id = #{value}
+        </where>
+    </delete>
+
+    <update id="update" parameterType="com.kdb.model.Articles">
+        UPDATE articles
+        <set>
+            <if test="gmtCreate!=null">
+                gmt_create = #{gmtCreate} ,
+            </if>
+            <if test="gmtModify!=null">
+                gmt_modify = #{gmtModify} ,
+            </if>
+            <if test="title!=null">
+                title = #{title},
+            </if>
+            <if test="content!=null">
+                content= #{content},
+            </if>
+            <if test="pictures!=null">
+                pictures = #{pictures},
+            </if>
+            <if test="tag!=null">
+                tag = #{tag},
+            </if>
+            <if test="authorId!=null">
+                author_id = #{authorId},
+            </if>
+            <if test="authorName!=null">
+                author_name = #{authorName},
+            </if>
+            <if test="authorPicture!=null">
+                author_picture = #{authorPicture},
+            </if>
+            <if test="type!=null">
+                type = #{type}
+            </if>
+        </set>
+        <where>
+            id = #{id}
+        </where>
+    </update>
+
+    <select id="getByCondition" parameterType="java.util.Map" resultMap="Articles">
+        SELECT
+        <include refid="allColumns"/>
+        FROM articles
+        <if test="_where_key != null">
+            <where>
+                <foreach collection="_where_key" item="andList" separator="or" open="(" close=")">
+                    <foreach collection="andList" item="filter" open="(" close=")" separator="and">
+                        <choose>
+                            <when test="filter.LT()">
+                                <![CDATA[
+              ${filter.column} < #{filter.value}
+              ]]>
+                            </when>
+                            <when test="filter.LE()">
+                                <![CDATA[
+              ${filter.column} <= #{filter.value}
+              ]]>
+                            </when>
+                            <when test="filter.GT()">
+                                <![CDATA[
+              ${filter.column} > #{filter.value}
+              ]]>
+                            </when>
+                            <when test="filter.GE()">
+                                <![CDATA[
+              ${filter.column} >= #{filter.value}
+              ]]>
+                            </when>
+                            <when test="filter.EQ()">
+                                <![CDATA[
+              ${filter.column} = #{filter.value}
+              ]]>
+                            </when>
+                            <when test="filter.LIKE()">
+                                <![CDATA[
+              ${filter.column} LIKE #{filter.value}
+              ]]>
+                            </when>
+                        </choose>
+                    </foreach>
+                </foreach>
+            </where>
+        </if>
+        <if test="_order_map_list != null">
+            <trim prefix="order by " suffix=" " suffixOverrides=",">
+                <foreach collection="_order_map_list" item="orderMap" index="index" separator=" ">
+                    <if test="orderMap._asc_ !=null">
+                        ${orderMap._column_name} ASC ,
+                    </if>
+                    <if test="orderMap._desc_ !=null">
+                        ${orderMap._column_name} DESC ,
+                    </if>
+                </foreach>
+            </trim>
+        </if>
+        <if test="_limit_offset !=null and _limit_total !=null ">
+            LIMIT ${_limit_offset} , ${_limit_total}
+        </if>
+    </select>
+
+
+</mapper>

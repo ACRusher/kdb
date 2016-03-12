@@ -1,0 +1,17 @@
+<root alive="true">
+    <name>name</name>
+    <age>11</age>
+    <phone>13812341234</phone>
+    <girlFriends>
+        <girl alive="true">
+            <name>kitty</name>
+            <age>13</age>
+            <phone>13312341234</phone>
+        </girl>
+    </girlFriends>
+    <pet>
+        <name>dog</name>
+        <age>1</age>
+    </pet>
+    <birthDay>1988-08-11 08:00:00</birthDay>
+</root>

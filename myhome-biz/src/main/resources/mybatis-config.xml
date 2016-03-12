@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <!--<properties resource="jdbc.properties">-->
+        <!--<property name="driver" value="com.mysql.jdbc.Driver" />-->
+    <!--</properties>-->
+
+    <settings>
+        <setting name="cacheEnabled" value="true" />
+        <setting name="lazyLoadingEnabled" value="false" />
+        <setting name="multipleResultSetsEnabled" value="true" />
+        <setting name="useColumnLabel" value="true" />
+        <setting name="useGeneratedKeys" value="false" />
+        <setting name="defaultExecutorType" value="SIMPLE" />
+        <setting name="defaultStatementTimeout" value="25" />
+    </settings>
+
+    <mappers>
+        <mapper resource="mapper/personMapper.xml" />
+        <mapper resource="mapper/userMapper.xml" />
+        <mapper resource="mapper/articlesMapper.xml" />
+        <mapper resource="mapper/articleCommentsMapper.xml" />
+        <mapper resource="mapper/operatorPackageMapper.xml" />
+        <mapper resource="mapper/operatorsMapper.xml" />
+        <mapper resource="mapper/orderMapper.xml" />
+        <mapper resource="mapper/personMapper.xml" />
+        <mapper resource="mapper/userCommentMapper.xml" />
+        <mapper resource="mapper/userExposureMapper.xml" />
+        <mapper resource="mapper/userMapper.xml" />
+        <mapper resource="mapper/userSpeedMapper.xml" />
+        <mapper resource="mapper/villageMapper.xml" />
+        <mapper resource="mapper/villageOperatorsMapper.xml" />
+    </mappers>
+
+</configuration>

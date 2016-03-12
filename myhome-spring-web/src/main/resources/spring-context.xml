@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 自动扫描的包名 -->
+    <context:component-scan base-package="com.kdb" ></context:component-scan>
+
+    <!-- 默认的注解映射的支持 -->
+    <mvc:annotation-driven />
+
+    <!--
+    关于 spring aop 注解有很多实现方式，但是需要注意
+    1. order 的使用 ，如何排序截断器
+    2. mvc 的controller 不要去 截断,
+       初步推断是mvc通过反射直接调用方法了，导致aop失败 并 请发空指针
+    -->
+
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+    <bean class="com.kdb.aop.MyAspect"/>
+
+    <bean id="serviceInterceptor" class="com.kdb.interceptor.ServiceInterceptor"/>
+    <bean id="serviceInterceptor1" class="com.kdb.interceptor.ServiceInterceptor1"/>
+
+    <aop:config>
+        <aop:advisor order="1" advice-ref="serviceInterceptor1" pointcut="execution(* com.kdb.service.SimpleService.*(..))"/>
+        <aop:advisor order="-1" advice-ref="serviceInterceptor" pointcut="execution(* com.kdb.service.SimpleService.*(..))"/>
+        <!--不要对 controller aop-->
+        <!--<aop:advisor order="-2147483648" advice-ref="serviceInterceptor" pointcut="execution(* com.kdb.web..*(..))"/>-->
+        <aop:aspect ref="serviceInterceptor">
+        </aop:aspect>
+    </aop:config>
+
+    <import resource="classpath:applicationContext-common.xml"/>
+    <import resource="spring-ehcache.xml"/>
+
+</beans>
