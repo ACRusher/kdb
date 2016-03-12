@@ -1,7 +1,6 @@
 package zxl.webapp.actions.idea;
 
 import com.opensymphony.xwork2.ActionSupport;
-import idea14.KeyGen;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.Result;
@@ -18,7 +17,7 @@ import java.util.Random;
 @Component
 @Scope("prototype")
 @Namespace("/idea14")
-public class IdeaRegistAction extends ActionSupport {
+public class RegistAction extends ActionSupport {
 
     private String name;
 
@@ -30,8 +29,7 @@ public class IdeaRegistAction extends ActionSupport {
     @Action(value = "register")
     public void doRegist(){
         Random r = new Random();
-        String result=KeyGen.MakeKey(name, 0, r.nextInt(100000));
-        Struts2Util.renderText(result);
+        Struts2Util.renderText("");
     }
 
     public String getName() {
